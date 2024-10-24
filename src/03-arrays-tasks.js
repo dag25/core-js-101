@@ -235,6 +235,7 @@ function toArrayOfSquares(arr) {
  */
 function getMovingSum(arr) {
  let sum = 0;
+  // eslint-disable-next-line no-return-assign
   return arr.map((x) => (sum += x));
 }
 
