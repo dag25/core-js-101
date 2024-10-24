@@ -249,7 +249,7 @@ function getMovingSum(arr) {
  * [ 'a', 'b', 'c' , null ]  => [ "b", null ]
  * [ "a" ] => []
  */
-function getSecondItems( arr) {
+function getSecondItems(arr) {
   return arr.filter((x, i) => (i + 1) % 2 === 0);
 }
 
