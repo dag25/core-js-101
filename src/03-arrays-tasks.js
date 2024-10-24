@@ -238,7 +238,7 @@ function getMovingSum(arr) {
   return arr.map((x) => {
     sum += x;
     return sum;
-  })
+  });
 }
 
 /**
