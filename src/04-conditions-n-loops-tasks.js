@@ -132,8 +132,22 @@ function isTriangle(a, b, c) {
  *   { top:20, left:20, width: 20, height: 20 }    =>  false
  *
  */
-function doRectanglesOverlap(/* rect1, rect2 */) {
-  throw new Error('Not implemented');
+function doRectanglesOverlap(rect1, rect2) {
+  // eslint-disable-next-line no-param-reassign
+  rect1.right = rect1.left + rect1.width;
+  // eslint-disable-next-line no-param-reassign
+  rect1.bottom = rect1.top + rect1.height;
+  // eslint-disable-next-line no-param-reassign
+  rect2.right = rect2.left + rect2.width;
+  // eslint-disable-next-line no-param-reassign
+  rect2.bottom = rect2.top + rect2.height;
+
+  return (
+    rect1.left < rect2.right
+    && rect1.right > rect2.left
+    && rect1.top < rect2.bottom
+    && rect1.bottom > rect2.top
+  );
 }
 
 
